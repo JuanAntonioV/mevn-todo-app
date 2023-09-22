@@ -1,6 +1,13 @@
 import { createApp } from 'vue';
-import './styles/main.css';
-import App from './App.vue';
-import router from './routers';
 
-createApp(App).use(router).mount('#app');
+// Styles
+import './styles/main.css';
+
+// Components
+import App from './App.vue';
+
+// Plugins
+import router from './routers';
+import stores from './stores';
+
+createApp(App).use(stores).use(router).mount('#app');
