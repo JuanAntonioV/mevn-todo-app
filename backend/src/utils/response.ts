@@ -63,3 +63,15 @@ export const serverErrorResponse = (
 
     return res.status(code).json(format);
 };
+
+const ERROR_INPUT_VALIDATION = 'Input tidak valid';
+const ERROR_PARAMS_VALIDATION = 'Input parameter tidak valid';
+const ERROR_NOT_FOUND = 'Data tidak ditemukan';
+const ERROR_SERVER = 'Terjadi kesalahan pada server';
+
+export const errorMessage = {
+    ERROR_INPUT_VALIDATION,
+    ERROR_PARAMS_VALIDATION,
+    ERROR_NOT_FOUND,
+    ERROR_SERVER,
+};
