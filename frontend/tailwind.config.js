@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ['./index.html', './src/**/*.{vue}'],
+    content: ['./index.html', './src/**/*.{vue, js, jsx, ts, tsx}'],
     theme: {
         extend: {
             fontFamily: {
@@ -8,5 +8,15 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [require('daisyui')],
+    daisyui: {
+        themes: false,
+        darkTheme: 'light',
+        base: true,
+        utils: true,
+        styled: true,
+        rtl: false,
+        prefix: '',
+        logs: true,
+    },
 };

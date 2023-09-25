@@ -1,13 +1,22 @@
+import MainLayout from '../layouts/MainLayout.vue';
+import routeNames from './routeNames';
+
 const routes = [
     {
         path: '/',
-        name: 'home',
-        component: () => import('../pages/HomePage.vue'),
-    },
-    {
-        path: '/about',
-        name: 'about',
-        component: () => import('../pages/AboutPage.vue'),
+        component: MainLayout,
+        children: [
+            {
+                path: '/',
+                name: routeNames.home,
+                component: () => import('../pages/HomePage.vue'),
+            },
+            {
+                path: '/about',
+                name: routeNames.about,
+                component: () => import('../pages/AboutPage.vue'),
+            },
+        ],
     },
 ];
 
